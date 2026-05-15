@@ -1,5 +1,11 @@
-sr = input().split()
-s = 0
-for i in sr:
-    s += int(i)
-print(s)
+def progress(a1, r, n):
+    '''
+    Function finds the n-th term of a progression
+    '''
+    if n == 1:
+        return a1
+    else:
+        return r + progress(a1, r, n - 1)
+    
+
+print(progress(3, 7, 3))
